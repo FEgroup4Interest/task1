@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <style>
+* {
+  margin: 0;
+  padding: 0;
+}
+.h40 {
+  height: 40px;
+}
+.h100 {
+  height: 100px;
+}
+.h120 {
+  height: 120px;
+}
+.h200 {
+  height: 200px;
+}
+.br {
+  border: 1px solid #f00
+}
+.bb {
+  border: 1px solid #00f
+}
+.container {
+  display: flex;
+  padding: 20px;
+  -webkit-justify-content: space-between; /* Safari */
+  justify-content: space-between;
+}
+.item {
+  width: 150px;
+  padding: 20px;
+  order: 2
+}
+@media only screen and (min-width: 640px){
+  .item {
+    margin: auto 0;
+  }
+}
+@media only screen and (max-width: 640px){
+  .container {
+    -webkit-flex-wrap: wrap;
+    flex-wrap: wrap;
+    padding: 0 20px 20px;
+  }
+  .item {
+    margin-top: 20px;
+  }
+  .item.last {
+    order: 1
+  }
+}
+    </style>
+  </head>
+  <body>
+    <div class="container">
+      <div class="item h120 br"></div>
+      <div class="item h100 br"></div>
+      <div class="item h40 br"></div>
+      <div class="item last h200 bb"></div>
+    </div>
+  </body>
+</html>
