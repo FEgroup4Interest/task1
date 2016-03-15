@@ -1,0 +1,115 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+$container-width: 100%;
+$gap-width: 20px;
+
+$width1: $container-width / 12;
+$width2: $container-width / 6;
+$width3: $container-width / 4;
+$width4: $container-width / 3;
+$width5: $width1 * 5;
+$width6: $container-width / 2;
+$width7: $width1 * 7;
+$width8: $width1 * 8;
+$width9: $width1 * 9;
+$width10: $width1 * 10;
+$width11: $width1 * 11;
+$width12: $container-width;
+
+.container{
+	padding: $gap-width / 2;
+}
+.row{
+	width: $container-width;
+	&:before,&:after{
+		content: '';
+		display: table;
+		clear: both;
+	}
+}
+.col-md-1,.col-md-2,.col-md-3,.col-md-4,.col-md-5,.col-md-6,.col-md-7,.col-md-8,.col-md-9,.col-md-10,.col-md-11,.col-md-12{
+	box-sizing: border-box;
+	float: left;
+}
+.inside{
+  height: 50px;
+  border: 1px solid #999;
+  background: #eee;
+	margin-top: $gap-width;
+	margin-left: $gap-width / 2;
+	margin-right: $gap-width / 2
+}
+.col-md-12 .inside{
+	margin-left: 0
+}
+.col-md-1{
+	width: $width1;
+}
+.col-md-2{
+	width: $width2;
+}
+.col-md-3{
+	width: $width3;
+}
+.col-md-4{
+	width: $width4;
+}
+.col-md-5{
+	width: $width5;
+}
+.col-md-6{
+	width: $width6;
+}
+.col-md-7{
+	width: $width7;
+}
+.col-md-8{
+	width: $width8;
+}
+.col-md-10{
+	width: $width9;
+}
+.col-md-11{
+	width: $width11;
+}
+.col-md-12{
+	width: $width12;
+}
+
+@media (max-width:768px) {
+  .col-sm-1{
+  	width: $width1;
+  }
+  .col-sm-2{
+  	width: $width2;
+  }
+  .col-sm-3{
+  	width: $width3;
+  }
+  .col-sm-4{
+  	width: $width4;
+  }
+  .col-sm-5{
+  	width: $width5;
+  }
+  .col-sm-6{
+  	width: $width6;
+  }
+  .col-sm-7{
+  	width: $width7;
+  }
+  .col-sm-8{
+  	width: $width8;
+  }
+  .col-sm-10{
+  	width: $width9;
+  }
+  .col-sm-11{
+  	width: $width11;
+  }
+  .col-sm-12{
+  	width: $width12;
+  }
+}
