@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>task_1_5</title>
+	<style type="text/css">
+   
+    body{
+    	margin: 0px;
+    	background-color: rgb(222,222,222);
+    }
+
+    /*导航栏的样式*/
+    header{
+    	display: block;
+    	width: 100%;
+    	height: 60px;
+    	background: url(2.jpg) no-repeat #333;
+    	background-position: 40px 50%;	
+    }
+    header ul{
+    	float: right;
+    }
+    header a{
+    	text-decoration: none;
+    	color: white;
+    }
+
+
+    /*中间内容的样式*/
+    .container{
+    	position:relative;
+    	top:30px;
+    	left: 0px;
+    	bottom: 100px;
+    }
+    
+     /*主体左边内容的样式*/
+     .main{
+     	position: absolute;
+     	left: 20px;
+     	right: 440px;
+     	margin-bottom: 100px;
+     }
+     .main>div{
+    	background-color: white;
+    	box-shadow:2px 2px 2px 2px #b0b0b0;
+    	padding:20px;
+    	margin-bottom: 20px;
+        }
+
+
+     /*侧边栏的样式*/
+    #sider_bar{
+    	background-color: white;
+    	box-shadow:2px 2px 2px 2px #b0b0b0;
+    	padding:20px;
+    	margin-right: 20px;
+    	width:360px;
+    	float: right;
+    }
+    #sider_bar div{
+    	position: relative;
+    	width:100%;
+    	margin-top:50px;
+    }
+    #sider_bar div>label{
+    	width:120px;
+    	text-align: right;
+    	display:inline-block;
+    	margin-top:10px;
+    }
+    em{
+    	position: absolute;
+         left: 128px;
+         font-style: normal;
+         font-size: 8px;
+         color: gray;
+    }
+    .warning_email{
+         top:40px;
+     }
+     .warning_password{
+     	top:70px;
+     }
+     textarea{
+     	display: inline-block;
+     	width:265px;
+     	margin-top: 10px;
+     	margin-bottom: 10px;
+     }
+     .bottom_label{
+     	vertical-align: top;
+     }
+
+    .btn{
+    	width:100%;
+    	background-color: #3355D0;
+    	border-radius: 8px;
+    	height: 40px;
+    }
+
+
+    /*中间内容有关的样式*/
+    h2,span{
+    	color: gray;
+    }
+    p{
+    	text-indent: 2em;
+    }
+    dl{
+    	border: 1px solid gray;
+    	padding-top: 10px;
+    	padding-bottom: 10px;
+    	width: 215px;
+    	margin-left: 50px;
+    	float: left;
+    }
+
+    /*清除dl浮动带来的影响*/
+    .pic{
+    	overflow: hidden;
+    }
+    dd{
+    	margin-left:20px;
+    }
+    table{
+    	width:100%;
+    	text-align: left;
+    	padding:0px;
+    	margin: 0px;
+    	border: 1px solid gray;
+    	border-spacing: 0px;
+    	border-collapse:collapse;
+    }
+    th{
+    	background-color: #333;
+    	color: white;
+        border: 1px solid #E6E6E6;
+    }
+     tbody td{
+    	border: 1px solid #E6E6E6;
+    }
+    tfoot td{
+         background-color:#CCCCCC;
+    }
+    
+
+    /*底边的样式*/
+    footer{
+    	position: fixed;
+    	bottom: 0px;
+    	height: 100px;
+    	line-height: 100px;
+    	width: 100%;
+    	text-align: center;
+    	color: white;
+     	background-color: black;
+    }
+
+	</style>
+</head>
+<body>
+    <header>
+        <nav>
+	        <ul>
+	          <li>
+	             <a href="javascript:;" >
+		    导航链接四
+	             </a>
+	          </li>
+	        </ul>
+	        <ul>
+	          <li>
+	             <a href="javascript:;" >
+		    导航链接三
+	             </a>
+	          </li>
+	        </ul>
+	        <ul>
+	          <li>
+	             <a href="javascript:;" >
+		    导航链接二
+	             </a>
+	          </li>
+	        </ul>
+	        <ul>
+	          <li>
+	             <a href="javascript:;" >
+		    导航链接一
+	             </a>
+	          </li>
+	        </ul>
+        </nav>
+    </header>
+    <div class="container">
+        <div id="sider_bar">
+	        <h2>侧栏注册窗口标题</h2>
+	        <form action="#">
+	            <div>
+	                <label for="email">请输入邮箱地址
+	                </label>
+	                <input type="text" id ="email" placeholder="这是一个文本输入框"/>
+	                <em class="warning_email">邮箱地址请按要求格式输入
+	                </em>
+	            </div>
+	            <div>
+	            	<label for="password">请输入密码
+	            	</label>
+	            	<input type="password" id="password" placeholder="这是一个文本输入框"/>
+	            	<br/>
+	            	<label for="consure">请重复输入密码
+	            	</label>
+	            	<input type="password" id="consure" placeholder="这是一个文本输入框"/>
+	            	 <em class="warning_password">密码请为6-16位英文数字
+	            	 </em>
+	            </div>
+	            <div>
+	                <label>性别</label>
+	                <span>
+	            	    <label for="sex_man">
+	            	    <input type="radio" id="sex_man" value="radio" checked="checked" />男</label> 
+	            	    <label for="sex_woman">
+	            	    <input type="radio" id="sex_woman" value="radio"/>女</label>
+	                </span>
+	            	    <br/>
+	            	    <label for="city">城市</label>
+	            	    <select id="city">
+	            	    	<option>南京</option>
+	            	    	<option>上海</option>
+	            	    	<option>深圳</option>
+	            	    	<option selected="selected">北京</option>
+	            	    </select>
+	            	    <br/>
+	            	    <label>爱好</label>
+	            	<span>
+	            	    <label for="sport">
+	            		<input type="checkbox" id="sport" value="checkbox"/>运动
+	            	    </label>
+	  	                <label for="act">
+	  		            <input type="checkbox" id="act" value="checkbox"/>艺术
+	  	                </label>
+	  	                <label for="science">
+	  		            <input type="checkbox" id="science" value="checkbox"/>科学
+	  	                </label>
+	  	            </span>
+	  	            <br/>
+	             	<label class="bottom_label" for="describe">个人描述</label>
+	  	            <textarea id="describe" rows="5" placeholder="这是一个多行输入框，输入您的个人描述">
+	  	            </textarea>
+	  	            <input class="btn" type="submit" value="确认提交"/>
+	            </div>
+	        </form>
+	    </div>
+	    <div class="main">
+            <div>
+	        <h1>文章一级标题</h1>
+	        <h2>文章二级标题</h2>
+	        <span>文章作者</span> <span>文章发布时间</span>
+	        <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落,换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，<b>这里有个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落,这是一个很长很长的段落，这是一个很长很长的段落,这是一个很长很长的段落，这是一个很长很长的段落,这是一个很长很长的段落。</p>
+	        <img src="1.png" alt="好看的图片"/>
+	        <P>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，换行了<br/>这是一个很长的段落，这是一个很长的段落，这是一个很长的段落，<b>这里有一个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接点击后打开新窗口链接到http://ife.baidu.com</a>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</P>
+	        </div>
+	        <div>
+	        <h1>另一篇文章一级标题</h1>
+	        <h2>文章二级标题</h2>
+	        <span>文章作者</span> <span>文章发布时间</span>
+	        <p>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，换行了<br/>这是一个很长很长的段落，这是一个很长很长的段落，<a href="http://ife.baidu.com">这里有一个链接链接到http://ife.baidu.com</a>这是一个很长的段落，这是一个很长的段落，<b>这里有一个粗体字</b>这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落，这是一个很长很长的段落。</p>
+	        <img src="1.png" alt="好看的图片"/>
+	        <ul>
+	  	        <li>列表项目一</li>
+	  	        <li>列表项目二</li>
+	  	        <li>列表项目三</li>
+	        </ul>
+	        </div>
+	        <div class="pic">
+	        <h2>图片</h2>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        <dl>
+	  	        <dd>好看的图片</dd>
+	  	        <dd><img src="1.png"/></dd>
+	        </dl>
+	        </div>
+	        <div>
+	        <h1>最后一篇文章一级标题</h1>
+	        <h2>文章二级标题</h2>
+	        <span>文章作者</span> <span>文章发布时间</span>
+	        <ol>
+	  	        <li>排名1</li>
+	  	        <li>排名2</li>
+	  	        <li>排名3</li>
+	        </ol>
+	        <table>
+	  	        <caption>表格标题</caption>
+	  	        <thead>
+	  		    <tr>
+	  		    	<th>表头</th><th>表头</th><th>表头</th>
+	  		    </tr>
+	  	        </thead>
+	  	        <tbody>
+	  	        	<tr>
+	  	        		<td>表内容单元格</td><td>表内容单元格</td><td><a href="javascript:;">操作</a></td>
+	  	        	</tr>
+	  	        	<tr>
+	  	        		<td>表内容单元格</td><td>表内容单元格</td><td><a href="javascript:;">操作</a></td>
+	  	        	</tr>
+	  	        	<tr>
+	  	        		<td>表内容单元格</td><td>表内容单元格</td><td><a href="javascript:;">操作</a></td>
+	  	        	</tr>
+	  	        	<tr>
+	  			        <td>表内容单元格</td><td>表内容单元格</td><td><a href="javascript:;">操作</a></td>
+	  		        </tr>
+	  		    </tbody>
+	  		    <tfoot>
+	  		        <tr>
+	  	        		<td>总计</td><td colspan="2">1000</td>
+	  		        </tr>
+	  		    </tfoot>
+	        </table>
+	        </div>
+	    </div>
+    </div>
+    <footer>
+	 	<span>版权所有</span>&copy;
+    </footer>
+</body>
+</html>
