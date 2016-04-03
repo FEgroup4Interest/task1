@@ -10,6 +10,10 @@ body{
     height:60px;
     background-color: #444;
 }
+.menu img{
+    margin-top: 10px;
+    margin-left: 10px;
+}
 .menu ul{
     float: right;
     margin-top: 20px;
@@ -20,13 +24,14 @@ body{
     margin-left: 20px;
 }
 .menu ul li a{
+    text-decoration:none;
     font-size: 12px;
     font-family: 黑体;
     color: white;
 }
 .body-left{
     float: left;
-    width: 60vw;
+    width: calc(100% - 385px);
     border: none;
 }
 .mainbody{
@@ -58,7 +63,7 @@ body{
 .body-right{
     background-color: #ffffff;
     float: left;
-    width: 35vw;
+    width: 350px;
     margin: 20px 20px 0 10px;
     border: none;
 }
